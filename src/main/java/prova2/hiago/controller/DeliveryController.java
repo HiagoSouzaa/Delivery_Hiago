@@ -39,7 +39,7 @@ public class DeliveryController {
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public ResponseEntity<DeliveryReponse> updateDelivery(@RequestBody DeliveryRequest request, @PathVariable String id) {
+    public ResponseEntity<Object> updateDelivery(@RequestBody DeliveryRequest request, @PathVariable String id) {
         return ResponseEntity.ok(service.updateDelivery(request, id));
     }
 

@@ -27,8 +27,8 @@ public class DeliveryServiceImpl implements DeliveryService {
 
     @Override
     public DeliveryReponse create(DeliveryRequest request) {
-        Delivery delivery = new Delivery();
-        delivery.setOrdercode(request.getOrdercode());
+        var delivery = new Delivery();
+        delivery.setOrdercode(request.getdeliveryOrdercode());
         delivery.setdeliveryCpf(request.getdeliveryCpf());
         delivery.setdeliveryDate(request.getdeliveryDate());
         delivery.setcep(request.getcep());
@@ -78,9 +78,9 @@ public class DeliveryServiceImpl implements DeliveryService {
         }
         Delivery delivery = getFromId(id);
 
-        delivery.setOrdercode(request.getOrdercode());
+        delivery.setOrdercode(request.getdeliveryOrdercode());
         delivery.setdeliveryCpf(request.getdeliveryCpf());
-        delivery.setDeliveryDate(request.getDeliveryDate());
+        delivery.setdeliveryDate(request.getdeliveryDate());
         delivery.setcep(request.getcep());
         delivery.setstatus(request.getstatus());
         
@@ -117,12 +117,24 @@ public class DeliveryServiceImpl implements DeliveryService {
         DeliveryReponse response = new DeliveryReponse();
 
         response.setId(delivery.getId());
-        response.setOrdercode(delivery.getOrdercode());
+        response.setOrdercode(delivery.getdeliveryOrdercode());
         response.setdeliveryCpf(delivery.getdeliveryCpf());
-        response.setDeliveryDate(delivery.getDeliveryDate());
+        response.setdeliveryDate(delivery.getdeliveryDate());
         response.setcep(delivery.getcep());
         response.setstatus(delivery.getstatus());
 
         return response;
+    }
+
+    @Override
+    public DeliveryReponse updatePayment(DeliveryRequest request, String id) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public void deletePayment(String id) {
+        // TODO Auto-generated method stub
+        
     }
 }

@@ -21,4 +21,6 @@ public interface DeliveryService {
     void deletePayment(@PathVariable String id);
 
     Object updateDelivery(DeliveryRequest request, String id);
+
+    void deleteDelivery(String id);
 }

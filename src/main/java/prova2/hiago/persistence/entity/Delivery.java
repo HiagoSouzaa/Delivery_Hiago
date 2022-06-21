@@ -10,12 +10,12 @@ public class Delivery {
 
     @Id
     private String id;
-    private String code;
-    private String deliveryType;
+    private String Ordercode;
+    private String deliveryCpf;
     private LocalDate deliveryDate;
-    private LocalDate dueDate;
-    private Number value;
-
+    private Number cep;
+    private String status;
+    
     public String getId() {
         return id;
     }
@@ -24,20 +24,20 @@ public class Delivery {
         this.id = id;
     }
 
-    public String getCode() {
-        return code;
+    public String getdeliveryOrdercode() {
+        return Ordercode;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+    public void setOrdercode(String Ordercode) {
+        this.Ordercode = Ordercode;
     }
 
-    public String getdeliveryType() {
-        return deliveryType;
+    public String getdeliveryCpf() {
+        return deliveryCpf;
     }
 
-    public void setdeliveryType(String deliveryType) {
-        this.deliveryType = deliveryType;
+    public void setdeliveryCpf(String deliveryCpf) {
+        this.deliveryCpf = deliveryCpf;
     }
 
     public LocalDate getdeliveryDate() {
@@ -48,19 +48,21 @@ public class Delivery {
         this.deliveryDate = deliveryDate;
     }
     
-    public LocalDate getDueDate() {
-        return dueDate;
+    
+
+    public Number getcep() {
+        return cep;
     }
 
-    public void setDueDate(LocalDate dueDate) {
-        this.dueDate = dueDate;
+    public void setcep(Number cep) {
+        this.cep = cep;
     }
 
-    public Number getValue() {
-        return value;
+    public String getstatus() {
+        return status;
     }
 
-    public void setValue(Number value) {
-        this.value = value;
+    public void setstatus(String status) {
+        this.status = status;
     }
 }
