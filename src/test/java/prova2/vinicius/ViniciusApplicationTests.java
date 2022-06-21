@@ -1,10 +1,10 @@
-package prova2.hiago;
+package prova2.vinicius;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class HiagoApplicationTests {
+class ViniciusApplicationTests {
 
 	@Test
 	void contextLoads() {
